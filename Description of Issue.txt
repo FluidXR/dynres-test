@@ -1,9 +1,0 @@
-There is an issue with the OpenXR composition layers, where when the source texture component is receiving a texture from a render texture. In this case the render texture is being updated from a camera in the scene.
-
-It appears that the Composition Layer visual receives the first 2-3 frames and then repeats them on a loop over and over again. So the composition layer is just stuck on those frames and doesn't get updated past that.
-
-This was tested with Unity 6000.1.5 & 6000.1.12 & "com.unity.xr.openxr": "1.15.0"
-
-I've provided a Unity Project, a sample .apk with the name "OverlayTest", and an example video of what I am seeing. The video is recorded at 30fps and is missing some frames.
-
-This is important for us for putting unity UI into an overlay and for certain rendering effects that our application uses. 
